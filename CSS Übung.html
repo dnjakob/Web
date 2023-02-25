@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="DE">
+    <head>
+        <meta charset="UTF-8">
+        <style>
+            body { 
+                background-color: black;
+            }
+
+div {
+    background-color: red;
+    width: 200px;
+    position: relative;
+    left: 50%;
+    animation: supreme 1.5s linear alternate infinite;
+}
+
+h1 { 
+  color: white;
+  text-align: center;
+  font-family: Arial Black;
+  font-style: italic;
+  text-shadow: 2px 0 #000;
+}
+
+p { 
+  font-family: Comic Sans MS;
+  font-size: 40px;
+  color: turquoise;
+  animation: sans 0.75s linear alternate infinite;
+}
+
+.stil {
+    color: white;
+    font-family: Papyrus;
+    font-style: italic;
+}
+
+#lorem {
+    font-family: Courier;
+    font-size: 10pt;
+    color: lightgreen;
+    animation: paused;
+}
+
+.stil2 {
+    background-color: blueviolet;
+}
+
+@keyframes supreme {
+    from { left: 5%;}
+    to  { left: 85%;}
+}
+
+@keyframes sans {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+        </style>
+    </head>
+    <body>
+        <div><h1>Supreme</h1></div>
+
+        <p>Sans Undertale.</p>
+
+        <h2 class="stil stil2">bottom text</h2>
+
+        <p id="lorem">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At</p><br>
+
+        <p style="color:grey;animation:paused;font-size:10pt;font-family:sans-serif">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+    </body>
+</html>

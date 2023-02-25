@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<unternehmen>
+		<eintrag>
+				<firma>Marias Cafe</firma>
+				<kontaktperson>Maria Meier</kontaktperson>
+				<stadt>Rosenheim</stadt>
+		</eintrag>
+		<eintrag>
+				<firma>Maschinenbau Maier</firma>
+				<kontaktperson>Hans Maier</kontaktperson>
+				<stadt>Stuttgart</stadt>
+		</eintrag>
+		<eintrag>
+				<firma>Schreiner Müller</firma>
+				<kontaktperson>Roland Müller</kontaktperson>
+				<stadt>Traunstein</stadt>
+		</eintrag>
+		<eintrag>
+				<firma>Pizza Palast</firma>
+				<kontaktperson>Mario Rovelli</kontaktperson>
+				<stadt>Rosenheim</stadt>
+		</eintrag>
+		<eintrag>
+				<firma>Weinkellerei</firma>
+				<kontaktperson>Friedrich Speer</kontaktperson>
+				<stadt>Münster</stadt>
+		</eintrag>
+		<eintrag>
+				<firma>Gasthof zur Post</firma>
+				<kontaktperson>Georg Huber</kontaktperson>
+				<stadt>Miesbach</stadt>
+		</eintrag>
+</unternehmen>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="de-De">
+    <head>
+        <meta charset="UTF-8">
+        <meta viewport="viewport" content="width=device-width", inital-scale="1.0">
+        <title>CSS Animation</title>
+        <style>
+            .beispiel1 {
+                width: 175px;
+                height: 50px;
+                background-color: blueviolet;
+                animation: animation1 3.0s paused;                                    /*Shorthand "animation"--> Setzung eines Namen (sowas wie eine ID) für die Animation*/
+            }                                                                         /*Dauer der Animation; Einstellung zum Starten oder Pausieren der Animation, wenn die Seite geladen wird*/
+            
+
+            @keyframes animation1 {                                                   /*Bezug auf den Container mit dem genannten Namen, womit eine Animation erstellt wird*/
+                from {background-color: blueviolet;}                                /*Startpunkt der Animation*/
+                to {background-color: aquamarine;}                                  /*Endpunkt der Animation*/
+            }
+
+            p{
+                font-size: xx-large;
+                color: blueviolet;
+            }
+
+            .beispiel2 {
+                width: 200px;
+                height: 200px;
+                border-radius: 33%;
+                background-color: red;
+                position: relative;                                                    /*Position des Containers wird durch die relative Option ausrichtbar gemacht*/
+                animation: animation2 3s ease-in-out forwards paused;                  /*Die dritte Angabe steht für die Beschleunigungskurve der Animation*/
+            }                                                                          /*die vierte Angabe steht für die Abspielreihenfolge; die fünfte Angabe steht für den Endzustand der Animation*/
+
+            @keyframes animation2 {
+                0% {background-color:red; left:0px;}
+                50% {background-color: green; left:150px;}
+                100% {background-color:blue; left:450px;}
+            }
+
+            .beispiel3 {
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                background-color: yellow;
+                border: 1px solid black;
+                position: relative;
+                animation: animation3 5s linear 1.5s infinite normal paused;            /*4. Angabe --> Verzögerung der Animation*/                            
+            }                                                                           /*5. Angabe --> Wiederholung der Animation; 7. Angabe --> Endzustand der Animation*/
+
+            @keyframes animation3 {
+                0%   {left:0px; top:0px;}
+                12.5%  {left:200px; top:0px;}
+                25%  {left:200px; top:200px;}
+                37.5%  {left:400px; top:200px;}
+                50% {left:400px; top:0px;}
+                62.5% {left:600px; top:0px;}
+                75% {left:600px; top:200px;}
+                80% {left:400px; top:200px;}
+                85% {left:200px; top:200px;}
+                90% {left:0px; top:200px;}
+                95% {left:0px; top:100px;}
+                100% {left:0px; top:0px;}
+            }
+
+            .pellet1 {
+                width: 35px;
+                height: 10px;
+                border: 1px solid black;
+                border-radius: 40%;
+                position: relative;
+                left: 230px;
+                animation: collectible 0.01s linear 2.18s 1 forwards paused;
+            }
+
+            .pellet2 {
+                width: 35px;
+                height: 10px;
+                border: 1px solid black;
+                border-radius: 40%;
+                position: relative;
+                left: 430px;
+                animation: collectible 0.01s linear 3.55s 1 forwards paused;
+            }
+
+            .pellet3 {
+                width: 35px;
+                height: 10px;
+                border: 1px solid black;
+                border-radius: 40%;
+                position: relative;
+                left: 30px;
+                animation: collectible 0.01s linear 6.12s 1 forwards paused;
+            }
+
+            @keyframes collectible {                                                       /*Bei der Animation wird die Transparenz geregelt*/
+                from {opacity:1;}
+                to {opacity:0;}
+            }
+
+            .spacer3 {
+                margin-left: 300px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <h1>CSS Animation</h1>
+            <h2><i>Beispiel 1</i></h2>
+            <button onclick="startanimation1 ()">
+                <span>Start</span>
+            </button>            
+                <div class="beispiel1" id="beispiel1">
+                    <p>lorem ipsum</p>
+                </div><br><br>
+            <h2><i>Beispiel 2</i></h2>
+            <button onclick="startanimation2 ()">
+                <span>Start</span>
+            </button>          
+                <div class="beispiel2" id="beispiel2"></div><br><br>
+            <h2><i>Beispiel 3</i></h2>
+        <button class="spacer3" onclick="startanimation3 ()">
+            <span>Start</span>
+        </button>
+        <button onclick="stopanimation3 ()">
+            <span>Stop</span>
+        </button>
+                <div class="beispiel3" id="beispiel3"></div><br>
+                <div class="pellet1" id="pellet1"></div>
+                <div class="pellet2" id="pellet2"></div>
+                <div class="pellet3" id="pellet3"></div>
+        <script>
+            function startanimation1 (){
+                document.getElementById('beispiel1').style.animationPlayState = 'running';
+            }
+
+            function startanimation2 (){
+                document.getElementById('beispiel2').style.animationPlayState = 'running';
+            }
+
+            function startanimation3 (){
+                document.getElementById('beispiel3').style.animationPlayState = 'running';
+                document.getElementById('pellet1').style.animationPlayState = 'running';
+                document.getElementById('pellet2').style.animationPlayState = 'running';
+                document.getElementById('pellet3').style.animationPlayState = 'running';
+            }
+            
+            function stopanimation3 (){
+                document.getElementById('beispiel3').style.animationPlayState = 'paused';
+                document.getElementById('pellet1').style.animationPlayState = 'paused';
+                document.getElementById('pellet2').style.animationPlayState = 'paused';
+                document.getElementById('pellet3').style.animationPlayState = 'paused';
+            }
+        </script>
+    </body>
+</html>

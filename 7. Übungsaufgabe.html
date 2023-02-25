@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="de">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>7. Übungsaufgabe</title>
+    </head>
+    <body>
+        <form>
+            <label for="game">Wähle ein Spiel:</label>
+            <select id="game" name="game" multiple>
+                <option value="CS:GO">CS:GO</option>
+                <option value="Valorant">Valorant</option>
+                <option value="LoL">LoL</option>
+                <option value="DotA 2">DotA 2</option>
+                <option value="LoR">LoR</option>
+                <option value="Artifact">Artifact</option>
+            </select><br><br>
+            <textarea name="message" rows="5" style="width:100%">
+                Gruezi
+            </textarea><br>
+            <button type="button" onclick="alert('Gude!')">Press to click</button>
+            <fieldset>
+                <legend>Daten:</legend>
+                <label for="vorname">Vorname:</label><br>
+                <input type="text" id="vorname" name="vorname" value="Patrick"><br>
+                <label for="nachname">Nachname:</label><br>
+                <input type="text" id="nachname" name="nachname" value="Losensky"><br><br>
+                <input type="submit" value="Abschicken">
+            </fieldset><br>
+            <input list="klassen">
+            <datalist id="klassen">
+                <option value="Info1">
+                <option value="Info2">
+                <option value="Freko1">
+                <option value="Freko2">
+                <option value="MR">
+            </datalist><br><br>
+            <label for="pwd">Password:</label><br>
+            <input type="password" id="pwd" name="pwd"><br>
+            <input type="reset"><br><br>
+            <label for="colour">Farbe:</label>
+            <input type="color" id="colour" name="colour" value="#FE696A"><br><br>
+            <label for="datum">Datum:</label>
+            <input type="date" id="datum" name="datum" min="2022-10-01"><br><br>
+            <label for="datumunduhrzeit">Datum und Uhrzeit:</label>
+            <input type="datetime-local" id="datumunduhrzeit" name="datumunduhrzeit"><br><br>
+            <label for="email">E-Mail:</label>
+            <input type="email" id="email" name="email"><br><br>
+            <input type="image" src="chrome://branding/content/about-logo.png"><br><br>
+            <label for="datei">Dateiupload:</label>
+            <input type="file" id="datei" name="datei"><br><br>
+            <label for="menge">Menge zwischen 1 bis 10:</label>
+            <input type="number" id="menge" name="menge" min="1" max="10"><br><br>
+            <label for="bereich">Bereich von 5 bis 50:</label>
+            <input type="range" id="bereich" name="bereich" min="5" max="50"><br><br>
+            <label for="homepage">URL:</label>
+            <input type="url" id="homepage" name="homepage">
+        </form>
+    </body>
+</html>
