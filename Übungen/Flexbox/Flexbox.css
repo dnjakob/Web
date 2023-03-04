@@ -1,0 +1,132 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;
+    overflow: hidden;
+    --background-color: rgb(229, 219, 246);
+    --background-color-secondary: rgba(255, 255, 255, 1);
+    --text-primary-color: rgba(0, 0, 0, 1);
+}
+
+#körper {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: var(--background-color);
+}
+
+#anzeige {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#logosuche {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#logo {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#symbol {
+    height: 82px;
+    width: 82px;
+    background: url('logo.png') no-repeat center;
+    background-size: 82px;
+}
+
+#name {
+    height: 82px;
+    width: 134px;
+    background: url('name.svg') no-repeat center center;
+    background-size: 134px;
+    margin: 20px;
+}
+
+#suche {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    height: 50px;
+    width: 725px;
+    margin-top: 30px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+}
+
+#g_logo {
+    height: 30px;
+    width: 30px;
+    background: url('g_logo.svg') no-repeat center center;
+    background-size: 20px;
+    margin-right: 15px;
+}
+
+#eingabefeld {
+    height: 25px;
+    width: 650px;
+}
+
+#eingabe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: lighter;
+    color: grey;
+}
+
+#icons {
+    display: flex;
+    flex-flow: row wrap;
+    width: 1000px;
+    justify-content: space-between;
+}
+
+.hover {
+    margin-top: 70px;
+    height: 140px;
+    width: 120px;
+    border-radius: 10px;
+}
+
+.hover:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.icon {
+    height: 80px;
+    width: 80px;
+    margin: 20px; 
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+    /*background: url('fortnite.png') no-repeat center center;*/
+}
+
+span {
+    display: block;
+    text-align: center;
+    font-size: 12px;
+    font-family: Arial;
+}
+
+img {
+    margin: 20px;
+}
+
+input {
+    outline: none;
+}
