@@ -3,7 +3,6 @@ body {
     padding: 0;
     display: flex;
     min-height: 100vh;
-    overflow: hidden;
     --background-color: rgb(229, 219, 246);
     --background-color-secondary: rgba(255, 255, 255, 1);
     --text-primary-color: rgba(0, 0, 0, 1);
@@ -90,12 +89,15 @@ body {
 
 #icons {
     display: flex;
-    flex-flow: row wrap;
     width: 1000px;
-    justify-content: space-between;
+    height: 100px;
+    max-width: calc(100% - 25px);
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 .hover {
+    display: flex;
     margin-top: 70px;
     height: 140px;
     width: 120px;
@@ -113,7 +115,6 @@ body {
     background-color: white;
     border-radius: 10px;
     box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
-    /*background: url('fortnite.png') no-repeat center center;*/
 }
 
 span {
@@ -129,4 +130,53 @@ img {
 
 input {
     outline: none;
+}
+
+
+@media screen and (max-width: 800px) {
+    
+    #suche {
+        width: 625px;
+    }
+
+    #g_logo {
+        margin-left: 10px;
+    }
+
+    #eingabefeld {
+        width: 550px;
+    }
+
+}
+
+@media screen and (max-width: 650px) {
+    
+    #suche {
+        width: 525px;
+    }
+
+    #g_logo {
+        margin-left: 20px;
+    }
+
+    #eingabefeld {
+        width: 450px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    
+    #suche {
+        width: 325px;
+    }
+
+    #g_logo {
+        margin-left: 10px;
+    }
+
+    #eingabefeld {
+        width: 250px;
+    }
+
 }
