@@ -90,7 +90,6 @@ body {
 #icons {
     display: flex;
     width: 1000px;
-    height: 100px;
     max-width: calc(100% - 25px);
     flex-wrap: wrap;
     justify-content: center;
