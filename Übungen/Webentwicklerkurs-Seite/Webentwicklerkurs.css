@@ -3,7 +3,6 @@ body {
     margin: 0;
     padding: 0;
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
     overflow: hidden;
     font-family: Arial;
@@ -17,8 +16,10 @@ body {
 }
 
 /* Defintion der Werte des header-Tags */
-header{
+header {
     width: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Definition des Header-Bereichs */
@@ -32,7 +33,7 @@ header{
 
 /* Definition der Überschrift */
 .Ueberschrift1 {
-    font-size: 3rem;
+    font-size: 2rem;
 }
 
 /* Defintion des kleinen Textes unter der Hauptüberschrift */
@@ -47,10 +48,21 @@ header{
     display: inline-block;
     height: 50px;
     background-color: #333;
-    align-content: center;
 }
 
-/* Defintion der Anker in der Navbar */
-.Navigationsbar a {
+a {
     color: white;
 }
+
+/* Definition der Anker-Tags */
+a:link {
+    text-decoration: none; }
+
+a:visited {
+    text-decoration: none; }
+
+a:hover {
+    text-decoration: none; }
+
+a:active {
+    text-decoration: none; }
