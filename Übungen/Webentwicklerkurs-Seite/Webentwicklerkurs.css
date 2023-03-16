@@ -4,7 +4,6 @@ body {
     padding: 0;
     display: flex;
     min-height: 100vh;
-    overflow: hidden;
     font-family: Arial;
 }
 
@@ -13,6 +12,7 @@ body {
     width: 100%;
     display: flex;
     justify-content: center;
+    flex-direction: column;
 }
 
 /* Defintion der Werte des header-Tags */
@@ -33,7 +33,7 @@ header {
 
 /* Definition der Überschrift */
 .Ueberschrift1 {
-    font-size: 2rem;
+    font-size: 45px;
 }
 
 /* Defintion des kleinen Textes unter der Hauptüberschrift */
@@ -45,24 +45,210 @@ header {
 /* Definition der Navbar */
 .Navigationsbar {
     width: 100%;
-    display: inline-block;
+    display: flex;
     height: 50px;
     background-color: #333;
 }
 
-a {
+.navbutton {
+    display: flex;
+    height: 100%;
+    width: 125px;
+    align-items: center;
+    justify-content: center;
+}
+
+.navbutton a {
     color: white;
+}
+
+.navbutton:hover {
+    background-color: #ddd;
+    transition: all .2s linear;
+}
+
+.navbutton:hover a {
+    color: black;
+    transition: all .2s linear;
 }
 
 /* Definition der Anker-Tags */
 a:link {
-    text-decoration: none; }
+    text-decoration: none;
+}
 
 a:visited {
-    text-decoration: none; }
+    text-decoration: none;
+}
 
 a:hover {
-    text-decoration: none; }
+    text-decoration: none; 
+}
 
 a:active {
-    text-decoration: none; }
+    text-decoration: none; 
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 100%;
+}
+
+.Inhalt {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+}
+
+.links {
+    display: flex;
+    background-color: #f1f1f1;
+}
+
+.linksinhalt {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+.Ueberschrift2 {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.Bildueberschrift1 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Bild1 {
+    height: 200px;
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+}
+
+.Bildtext1 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.Ueberschrift3 {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.Bildueberschrift2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.Bild2 {
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+}
+
+.Bild3 {
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+}
+
+.Bild4 {
+    height: 50px;
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+}
+
+.Ueberschrift4 {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.Bildueberschrift3 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Bild5 {
+    height: 200px;
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+}
+
+.Bildtext2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.Text2 {
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.Bildueberschrift4 {
+    font-size: xx-large;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.Bildueberschrift5 {
+    font-size: 14px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.Bild6 {
+    height: 200px;
+    width: 100%;
+    background-color: grey;
+    margin-bottom: 10px;
+}
+
+.Bildtext3 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+.Text3 {
+    font-size: 14px;
+    margin-bottom: 50px;
+}
+
+.rechts {
+    display: flex;
+}
+
+.rechtsinhalt {
+    display: flex;
+    flex-direction: column;
+    margin: 15px;
+}
+
+footer {
+    display: flex;
+    width: 100%;
+    height: 100px;
+}
+
+.Fusszeile {
+    width: 100%;
+    height: 100%;
+    background-color: #ddd;
+    font-size: xx-large;
+    font-weight: bold;
+    text-align: center;
+    padding-top: 25px;
+}
