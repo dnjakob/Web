@@ -25,21 +25,29 @@ header {
 /* Definition des Header-Bereichs */
 .Vorspann {
     width: 100%;
+    height: 200px;
     background-color: lightgreen;
     display: flex;
+}
+
+.Vorspanninhalt {
+    width: 100%;
+    display: flex;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
 /* Definition der Überschrift */
 .Ueberschrift1 {
-    font-size: 45px;
+    font-size: 60px;
+    font-weight: bolder;
+    margin-bottom: 20px;
 }
 
 /* Defintion des kleinen Textes unter der Hauptüberschrift */
 .Text1 {
     color: white;
-    margin-bottom: 75px;
 }
 
 /* Definition der Navbar */
@@ -190,12 +198,12 @@ main {
 
 .Bildtext2 {
     font-size: 14px;
-    margin-bottom: 10px;
+    margin-bottom: 17px;
 }
 
 .Text2 {
     font-size: 14px;
-    margin-bottom: 50px;
+    margin-bottom: 36px;
 }
 
 .Bildueberschrift4 {
@@ -224,7 +232,6 @@ main {
 
 .Text3 {
     font-size: 14px;
-    margin-bottom: 50px;
 }
 
 .rechts {
