@@ -1,11 +1,12 @@
 body {
+    height: 100dvh;
     margin: 0;
     padding: 0;
-    display: grid;
     font-family: Arial;
 }
 
 .koerper {
+    height: 100%;
     width: 100%;
     display: grid;
 }
@@ -37,24 +38,32 @@ ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+    display: grid;
+    grid-template-columns: repeat(4, 150px);
+    height: 100%;
 }
 
 li {
-    float: left;
+    align-content: center;
+    display: grid;
+    height: 100%;
 }
 
 li a {
-    display: block;
     text-decoration: none;
     color: white;
+    padding: 10px;
     text-align: center;
-    padding: 15px;
 }
 
-li a:hover {
+li:hover {
     background-color: #ddd;
     transition: all .2s linear;
+}
+
+li:hover a {
     color: black;
+    transition: all .2s linear;
 }
 
 aside {
@@ -110,4 +119,7 @@ footer {
 
 .unten {
     text-align: center;
+    display: grid;
+    justify-content: center;
+    align-content: center;
 }
