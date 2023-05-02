@@ -1,0 +1,113 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: grid;
+    font-family: Arial;
+}
+
+.koerper {
+    width: 100%;
+    display: grid;
+}
+
+header {
+    display: grid;
+    width: 100%;
+    grid-area: 1 / 1 / 4 / 9;
+}
+
+.Vorspann {
+    text-align: center;
+    background-color: limegreen;
+}
+
+.Vorspann h1 {
+    font-weight: 600;
+    font-size: 55pt;
+    margin-bottom: 10px;
+}
+
+.Vorspann p {
+    color: white;
+    margin-bottom: 50px;
+}
+
+ul {
+    background-color: #333;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    float: left;
+}
+
+li a {
+    display: block;
+    text-decoration: none;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+li a:hover {
+    background-color: #ddd;
+    transition: all .2s linear;
+    color: black;
+}
+
+aside {
+    display: grid;
+    background-color: #f1f1f1;
+    width: 100%;
+    grid-area: 4 / 1 / 11 / 3;
+}
+
+.links {
+    padding: 15px;
+}
+
+.Mittelbild {
+    background-color: #aaa;
+    height: 200px;
+}
+
+.Kleinbild {
+    background-color: #aaa;
+    height: 60px;
+}
+
+main {
+    display: grid;
+    width: 100%;
+    grid-area: 4 / 3 / 11 / 9;
+}
+
+.rechts {
+    padding: 15px;
+}
+
+.Grossbild {
+    background-color: #aaa;
+    height: 200px;
+}
+
+.Kleinbild, .Mittelbild, .Grossbild {
+    padding: 20px
+}
+
+.rechts br {
+    margin-bottom: 247px;
+}
+
+footer {
+    display: grid;
+    width: 100%;
+    grid-area: 11 / 1 / 12 / 9;
+    background-color: #aaa;
+}
+
+.unten {
+    text-align: center;
+}
