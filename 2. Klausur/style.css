@@ -1,0 +1,252 @@
+/* Definition des Body's vom Dokument */
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: Arial;
+    display: flex;
+}
+
+/* Defintion des Wrappers */
+.koerper {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 15px;
+}
+
+/* Definition der Eigenschaften des ersten Aufgabenbereiches */
+.angebotsauswahl {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+/* Definition der Eigenschaften des linken Hälfte */
+.links {
+    display: flex;
+    width: 100%;
+}
+
+/* Definition der Eigenschaften innerhalb der linken Hälfte */
+.linksinhalt {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 15px;
+}
+
+/* Definition der Überschrift in der linken Hälfte */
+.linksinhalt h3 {
+    margin-top: 0;
+}
+
+/* Definition der Eigenschaften der oberen Hälfte des linken Inhalts */
+.linksoben {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.linksobeninhalt {
+    background-color: green;
+    width: 100%;
+    height: 250px;
+}
+
+/* Definition der Eigenschaften der unteren Hälfte des linken Inhalts */
+.linksunten {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.linksuntenkoerper1 {
+    background-color: yellow;
+    width: 100%;
+    height: 250px;
+}
+
+.linksuntenkoerper2 {
+    background-color: aqua;
+    width: 100%;
+    height: 250px;
+}
+
+/* Definition der Eigenschaften des rechten Hälfte */
+.rechts {
+    display: flex;
+    width: 100%;
+    background-color: lightgrey;
+}
+
+/* Definition der Eigenschaften innerhalb der rechten Hälfte */
+.rechtsinhalt {
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    margin: 15px;
+}
+
+/* Definition der Überschrift in der rechten Hälfte */
+.rechtsinhalt h3 {
+    margin-top: 0;
+}
+
+/* Definition der Eigenschaften des oberen Bereichs des rechten Inhalts */
+.rechtsoben {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.rechtsobeninhalt {
+    background-color: bisque;
+    width: 100%;
+    height: 75px;
+}
+
+/* Definition der Eigenschaften des mittleren Bereichs des linken Inhalts */
+.rechtsmitte {
+    display: flex;
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.rechtsmitteinhalt {
+    background-color: darkgreen;
+    width: 100%;
+    height: 200px;
+}
+
+/* Definition der Eigenschaften des unteren Bereichs des linken Inhalts */
+.rechtsunten {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    gap: 15px;
+}
+
+.rechtsuntenkoerper1 {
+    background-color: lightskyblue;
+    width: 100%;
+    height: 215px;
+}
+
+.rechtsuntenkoerper2 {
+    background-color: red;
+    width: 100%;
+    height: 215px;
+}
+
+/* Definition der Eigenschaften des zweiten Aufgabenbereiches */
+.produktvorschau {
+    display: flex;
+    width: 100%;
+}
+
+/* Definition der Eigenschaften des Inhaltes des zweiten Aufgabenbereiches */
+.produktvorschauinhalt {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Definition der Eigenschaften der Gruppierung der einzelnen Kacheln */
+.gruppe1, .gruppe2 {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Definition der Größe der einzelnen Kacheln */
+.smartphone, .guertel, .fahrrad, .spielzeug {
+    display: flex;
+    width: 200px;
+    height: 300px;
+}
+
+/* Definition der Sortierung der Kacheln */
+.smartphoneinhalt, .guertelinhalt, .fahrradinhalt, .spielzeuginhalt {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Definition der Bilder der einzelnen Kacheln */
+.smartphonebild, .guertelbild, .fahrradbild, .spielzeugbild {
+    background-size: 100%;
+    width: 200px;
+    height: 150px;
+    background-position: center;
+    justify-self: center;
+    align-self: center;
+}
+
+/* Definition der Bilder der jeweiligen Kacheln */
+.smartphonebild {
+    background-image: url('elektronik.jpg');
+}
+
+.guertelbild {
+    background-image: url('guertel.jpg');
+}
+
+.fahrradbild {
+    background-image: url('rennrad.jpg');
+}
+
+.spielzeugbild {
+    background-image: url('spielwaren.jpg');
+}
+
+/* Definition der Texte von den Kacheln */
+.text1 {
+    font-size: 10pt;
+}
+
+.text2 {
+    color: green;
+    font-size: 8pt;
+}
+
+.text3 {
+    font-weight: bolder;
+    font-size: larger;
+}
+
+.text3:after {
+    content: " €";
+}
+
+/* Definition des responsiven Layouts für mittelgroße Geräte des ersten Aufgabenbereichs */
+@media (max-width: 800px) {
+    .produktvorschauinhalt {
+        flex-wrap: wrap;
+    }
+}
+
+/* Definition des responsiven Layouts für kleine Geräte des ersten Aufgabenbereichs */
+@media (max-width: 800px) {
+    .angebotsauswahl {
+        flex-direction: column;
+    }
+}
+
+/* Definition des responsiven Layouts für mittelgroße Geräte des zweiten Aufgabenbereichs */
+@media (max-width: 560px) {
+    .angebotsauswahl {
+        flex-direction: column;
+    }
+
+    .linksunten {
+        flex-direction: column;
+    }
+
+    .rechtsunten {
+        flex-direction: column;
+    }
+}
