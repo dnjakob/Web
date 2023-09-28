@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+
+
+
+</head>
+
+<body>
+
+    <h1 id="ueberschrift">Mit JavaScript kann man die Gestaltung von HTML ändern</h1>
+
+    <h2>Beispiel1</h2>
+
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+    ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+    et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum 
+    dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+    aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+    no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+    <button type="button" onclick="document.getElementById('ueberschrift').style.color='red'">Rot!</button>
+
+    <h2>Beispiel2</h2>
+
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum 
+        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+        no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+    <button type="button" onclick="document.getElementById('ueberschrift').style.color='green'">Grün!</button>
+
+    <h2>Beispiel3</h2>
+
+    <p>Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt 
+        ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores 
+        et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum 
+        dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna 
+        aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, 
+        no sea takimata sanctus est Lorem ipsum dolor sit amet.</p>
+
+    <button type="button" onclick="document.getElementById('ueberschrift').style.color='blue'">Blau!</button><br><br>
+
+    <button type="button" onclick="document.getElementById('ueberschrift').style.display='block'">Sichtbar!</button>
+    <button type="button" onclick="Unsichtbar()">Unsichtbar!</button><br><br>
+
+    <script>
+        function Unsichtbar() {
+          document.getElementById("ueberschrift").style.display = "none";
+          alert("Die Überschrift ist verschwunden!");
+        }
+    </script>
+
+    <button type="button" onclick="meinjavascript.js">Konsolenrechnung</button>
+
+</body>
+
+</html>
