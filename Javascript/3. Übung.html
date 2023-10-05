@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p id="demo0"></p>
+<p id="demo1"></p>
+<p id="demo2"></p>
+<p id="demo"></p>
+
+<button type="button" onclick="document.getElementById('demo0').innerHTML =
+'Der Wert von c ist: ' + c">Klick mich, um c auszuführen</button> <br>
+
+<button type="button" onclick="document.getElementById('demo1').innerHTML =
+'Der Wert von f ist: ' + f">Klick mich, um f auszuführen</button><br>
+
+<button type="button" onclick="document.getElementById('demo2').innerHTML =
+'Der Wert von i ist: ' + i">Klick mich, um i auszuführen</button><br>
+
+<button type="button" onclick="document.getElementById('demo').innerHTML =
+'Rechnung: ' + summe">Rechnen</button>
+
+<script>
+
+// Zur Ausführung im Code Editor nur das JavaScript ohne den <script> Tag kopieren.
+            
+// Verwendung von var
+var a = 120;
+var b = 23;
+var c = a + b;
+            
+// Verwendung von let; Kann so nicht ausgeführt werden, weil von außen nicht zugegriffen werden kann im BLock
+            
+let d = 33;
+let e = 44;
+let f = d + e;
+            
+// Verwendung undeklarierter Variablen; unterschiedliche Deklarationen können trotzdessen bspw. addiert werden
+// Redeklarieren kann unter Umständen Probleme machen; let und const können nicht redeklariert werden
+// Jedoch kann var redeklariert werden; Var ist veraltet
+            
+var g = 75;
+let h = 25;
+var i = g + h;
+var i = 666;
+    
+const preis1 = 5;
+const preis2 = 6;
+let summe = preis1 + preis2;
+            
+</script>
+
+</body>
+</html>
