@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <title>Array</title>
+</head>
+
+<body>
+    <p id='demo0'></p>
+    <p id='demo1'></p>
+    <p id='demo2'></p>
+    <p id='demo3'></p>
+    <p id='demo4'></p>
+    <button type="button" onclick="document.getElementById('demo0').innerHTML = beispielArray[0]">Erstes Array</button>
+    <button type="button" onclick="document.getElementById('demo1').innerHTML = rechnung()">Rechnung</button>
+    <button type="button" onclick="document.getElementById('demo2').innerHTML = beispielObjekt['nachName']">Objekt</button>
+    <button type="button" onclick="document.getElementById('demo3').innerHTML = weiteresArray[1]">Anderes Array</button>
+    <button type="button" onclick="document.getElementById('demo4').innerHTML = europaeischeLaender[0]"></button>
+    <script>
+        const autos = [
+            "Saab",
+            "Volvo",
+            "BMW"
+        ];
+
+        const punkte = [40];
+        const punktee = new Array(40);
+
+        const obst = ["Banane", "Orange", "Apfel"];
+        obst[6] = "Zitrone";
+
+        const beispielArray = [
+            "Kartoffel",
+            "Kürbis",
+
+            rechnung(),
+           
+            beispielObjekt = {
+                vorName: "Thomas",
+                nachName: "Müller",
+                alter: 46
+            },
+
+            weiteresArray = [
+                "Äpfel",
+                "Birnen",
+                "Pflaumen"
+            ]
+
+        ];
+
+        function rechnung() {
+            return 5 + 4;
+        }
+
+        europaeischeLaender = []                    // Später machen
+        function irgendwas() {
+            europaeischeLaender = ["Deutschland",
+                                    "Spanien",
+                                    "Frankreich",
+
+                                    staedte = {
+                                        name: "Duisburg",
+                                        einwohnerzahl: 13,
+                                        land: "Deutschland"
+                                    }
+        ];
+    };
+
+    </script>
+</body>
+
+</html>
