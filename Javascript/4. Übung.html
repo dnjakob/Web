@@ -1,0 +1,47 @@
+<html>
+
+<body>
+    <p id="demo"></p>
+    <p id="demo1"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <button type="button" onclick="document.getElementById('demo').innerHTML = x;">Berechne</button>
+    <button type="button"
+        onclick="document.getElementById('demo1').innerHTML = testPerson.familienName;">Methode</button>
+    <button type="button" onclick="document.getElementById('demo2').innerHTML = '<strong>Preis: </strong>' + lebensMittel.preis;">Preis
+        des Produktes</button>
+    <button type="button" onclick="document.getElementById('demo3').innerHTML = '<strong>Name: </strong>'  + lebensMittel['name'];">Name
+        des Produktes</button>
+    <script>
+        function summeBerechnen(wert1, wert2, wert3) {
+            return wert3 + (wert1 - wert2);
+        }
+        let wechsel = new Boolean(true);    //Später anschauen
+        if (wechsel == true) {
+            var x = summeBerechnen(1, 2, 3);
+            wechsel = false;
+        }
+        else if (wechsel == false) {
+            var x = summeBerechnen(4, 5, 6);
+            wechsel = true;
+        }
+
+        const auto = { marke: "BMW", modell: "3er", farbe: "weiss" };
+
+        const testPerson = {
+            vorName: "Thomas",
+            familienName: "Müller",
+            alter: 50,
+            augenFarbe: "blau"
+        };
+
+        const lebensMittel = {
+            name: "Leberkas-Semmel",
+            preis: "2,20€",
+            herkunft: "Bayern",
+            kategorie: "Frühstück"
+        };
+    </script>
+</body>
+
+</html>
