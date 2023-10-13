@@ -16,5 +16,36 @@ body {
 }
 
 #app {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
     background-color: #FFDAB9;
+    height: 300px;
+    width: 300px;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 15px 15px black;
+}
+
+#ueberschrift {
+    margin-top: auto;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    height: 75px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 200px;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: end;
+    height: 25px;
+    margin-bottom: 20px;
 }
