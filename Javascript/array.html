@@ -11,11 +11,12 @@
     <p id='demo2'></p>
     <p id='demo3'></p>
     <p id='demo4'></p>
+    <p id='demo5'></p>
     <button type="button" onclick="document.getElementById('demo0').innerHTML = beispielArray[0]">Erstes Array</button>
     <button type="button" onclick="document.getElementById('demo1').innerHTML = rechnung()">Rechnung</button>
     <button type="button" onclick="document.getElementById('demo2').innerHTML = beispielObjekt['nachName']">Objekt</button>
     <button type="button" onclick="document.getElementById('demo3').innerHTML = weiteresArray[1]">Anderes Array</button>
-    <button type="button" onclick="document.getElementById('demo4').innerHTML = europaeischeLaender[0]"></button>
+    <button type="button" onclick="irgendwas()">Letzte Aufgabe</button>
     <script>
         const autos = [
             "Saab",
@@ -51,9 +52,9 @@
 
         function rechnung() {
             return 5 + 4;
-        }
+        };
 
-        europaeischeLaender = []                    // Später machen
+        europaeischeLaender = []                    
         function irgendwas() {
             europaeischeLaender = ["Deutschland",
                                     "Spanien",
@@ -65,7 +66,10 @@
                                         land: "Deutschland"
                                     }
         ];
+        document.getElementById('demo4').innerHTML = europaeischeLaender[1];
+        document.getElementById('demo5').innerHTML = staedte["land"];
     };
+
 
     </script>
 </body>
