@@ -5,7 +5,6 @@
     <title>Array</title>
 </head>
 
-<body>
     <p id='demo0'></p>
     <p id='demo1'></p>
     <p id='demo2'></p>
@@ -16,7 +15,10 @@
     <button type="button" onclick="document.getElementById('demo1').innerHTML = rechnung()">Rechnung</button>
     <button type="button" onclick="document.getElementById('demo2').innerHTML = beispielObjekt['nachName']">Objekt</button>
     <button type="button" onclick="document.getElementById('demo3').innerHTML = weiteresArray[1]">Anderes Array</button>
-    <button type="button" onclick="irgendwas()">Letzte Aufgabe</button>
+    <button type="button" onclick="irgendwas()">Letzte Aufgabe</button><br><br>
+    <label for="eingabe">Wert speichern: </label>
+    <input type="text" id="eingabe"></input>
+    <button type="button" onclick="speichern()">Save</button>
     <script>
         const autos = [
             "Saab",
@@ -29,6 +31,9 @@
 
         const obst = ["Banane", "Orange", "Apfel"];
         obst[6] = "Zitrone";
+
+        const werte = [];
+    
 
         const beispielArray = [
             "Kartoffel",
@@ -68,6 +73,13 @@
         ];
         document.getElementById('demo4').innerHTML = europaeischeLaender[1];
         document.getElementById('demo5').innerHTML = staedte["land"];
+    };
+
+    function speichern() {
+        werte.push(eingabe.value);
+        for (let i = 0; i < werte.length; i++){
+            console.log(werte[i]);
+        };
     };
 
 
