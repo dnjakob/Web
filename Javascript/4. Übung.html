@@ -5,7 +5,7 @@
     <p id="demo1"></p>
     <p id="demo2"></p>
     <p id="demo3"></p>
-    <button type="button" onclick="berechnen();">Berechne</button>
+    <button type="button" onclick='document.getElementById("demo").innerHTML = summeBerechnen;'>Berechne</button>
     <button type="button"
         onclick="document.getElementById('demo1').innerHTML = testPerson.familienName;">Methode</button>
     <button type="button"
@@ -17,9 +17,10 @@
     <script>
         let wechsel = true;
 
-        function summeBerechnen(wert1, wert2, wert3) {
-            return wert3 + (wert1 - wert2);
+        function summeBerechnen(wert1) {
+            return 5 + (wert1 - 2);
         }
+        document.getElementById("demo").innerHTML = summeBerechnen;
 
         function berechnen() {
             let x;

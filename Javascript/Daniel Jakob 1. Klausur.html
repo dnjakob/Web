@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daniel Jakob 1. Klausur</title>
+    <script>
+
+        // Aufgabe 1.)
+        function berechneQuadrat(wert) {
+            let quadrat = Math.pow(wert,2);
+            console.log("Aufgabe 1 - Das Quadrat der Zahl " + wert + " lautet: " + quadrat);
+        };
+
+        berechneQuadrat(5);
+
+        // Aufgabe 2.)
+        const student = {
+            name: "Daniel",
+            alter: 24,
+            kurs: "Web"
+        };
+
+        function wertAenderung() {
+            student.alter = 21;
+            console.log("Aufgabe 2 - Das Alter von " + student.name + " lautet: " + student.alter);
+        };
+
+        wertAenderung();
+
+        // Aufgabe 3.)
+        const farben = ["rot", "grün", "blau"];
+
+        function arrayManipulation() {
+            farben.push("gelb");
+            farben.shift();
+            console.log("Aufgabe 3: " + farben);
+        };
+
+        arrayManipulation();
+
+        // Aufgabe 4.)
+        function ereignishandler() {
+            console.log("Aufgabe 4: Der Button wurde betätigt");
+        };
+
+        // Aufgabe 5.)
+        function zuCelsius(fahrenheit) {
+            let celsius = (5 / 9) * (fahrenheit - 32);
+            document.getElementById('celsius').innerHTML = celsius + " °C";
+        };
+
+
+    </script>
+</head>
+
+<body>
+    <button type="button" onclick="ereignishandler()">Aufgabe 4 - EreignisHandler</button><br>
+    <h2>Aufgabe 5</h2>
+    <label for="fahrenheit">Geben Sie einen Fahrenheit-Wert ein, der in Celsius umgewandelt werden soll: </label>
+    <input type="text" id="fahrenheit">
+    <button type="button" onclick="zuCelsius(document.getElementById('fahrenheit').value)">Umrechnen</button><br><br>
+    <label for="celsius">Antwort: </label>
+    <p id="celsius"></p>
+</body>
+
+</html>
