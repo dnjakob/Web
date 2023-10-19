@@ -11,7 +11,7 @@
     <p id='demo3'></p>
     <p id='demo4'></p>
     <p id='demo5'></p>
-    <button type="button" onclick="document.getElementById('demo0').innerHTML = beispielArray[0]">Erstes Array</button>
+    <button type="button" onclick="document.getElementById('demo0').innerHTML = beispielArray[3].nachName">Erstes Array</button>
     <button type="button" onclick="document.getElementById('demo1').innerHTML = rechnung()">Rechnung</button>
     <button type="button" onclick="document.getElementById('demo2').innerHTML = beispielObjekt['nachName']">Objekt</button>
     <button type="button" onclick="document.getElementById('demo3').innerHTML = weiteresArray[1]">Anderes Array</button>
@@ -60,19 +60,8 @@
         };
 
         europaeischeLaender = []                    
-        function irgendwas() {
-            europaeischeLaender = ["Deutschland",
-                                    "Spanien",
-                                    "Frankreich",
-
-                                    staedte = {
-                                        name: "Duisburg",
-                                        einwohnerzahl: 13,
-                                        land: "Deutschland"
-                                    }
-        ];
-        document.getElementById('demo4').innerHTML = europaeischeLaender[1];
-        document.getElementById('demo5').innerHTML = staedte["land"];
+        function irgendwas(wert1) {
+            
     };
 
     function speichern() {
