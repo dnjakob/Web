@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    min-height: 100vh;   /* Musst haben damit es voll skaliert */
+    font-family: Arial, Helvetica, sans-serif
+}
+
+#wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: rgb(144, 182, 40);
+}
+
+#app {
+    background-color: rgb(144, 182, 40);
+    height: 600px;
+    width: 600px;
+    border-radius: 10px 10px 10px 10px;
+    text-align: center;
+    font-size: 30px;
+    box-shadow: 25px 25px rgb(0, 0, 0);   /* Diese schwarze Umrandung außen rum */
+}

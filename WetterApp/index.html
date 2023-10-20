@@ -1,11 +1,14 @@
 <!DOCTYPE html>
 <html lang="de">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
+    <script type="text/javascript" src="script.js"></script>
     <title>Projekt Wetter-App</title>
 </head>
+
 <body>
     <div id="wrapper">
         <div id="app">
@@ -15,10 +18,14 @@
             <main>
                 <div id="formular">
                     <label for="stadtname">Stadtname:</label>
-                    <input type="text" id="stadtname" name="stadtname" value="Rosenheim"><br><br>
-                    <input type="submit" value="Absenden">
+                    <input type="text" id="stadtname" name="stadtname" value="Rosenheim" onfocus="this.value=''"><br>
+                    <button type="button" onclick="getWeather();">Aktuelle Wetter abrufen</button>
+                    <button type="button" onclick="getWeatherForecast();">5-Tage Prognose</button>
                 </div>
-                <div id="ergebnis"></div>
+                <div id="ergebnis">
+                    <p id="wetter1"></p>
+                    <p id="wetter2"></p>
+                </div>
             </main>
             <footer>
                 <div id="fussnote">
@@ -28,4 +35,5 @@
         </div>
     </div>
 </body>
+
 </html>
