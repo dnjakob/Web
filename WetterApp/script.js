@@ -20,7 +20,7 @@ function getWeather() {
 
 function getWeatherForecast() {
     const stadt = document.getElementById("stadtname").value;
-    const apiKey = "0e4194c846936b540bce21b6b2a47fb9";
+    const apiKey = "";
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${stadt}&appid=${apiKey}&units=metric&lang=de`;
 
     fetch(url)
