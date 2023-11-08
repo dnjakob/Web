@@ -1,44 +1,79 @@
 function aktuellesWetterAbrufen() {
-    const stadt = document.getElementById("stadtname").value;
-    const apiKey = "";
+    var stadt = document.getElementById("stadtname").value;
+    const apiKey = "0e4194c846936b540bce21b6b2a47fb9";
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${stadt}&appid=${apiKey}&units=metric&lang=de`;
+
+    if (document.getElementById("stadtname").value == '') {
+        window.alert("Bitte geben Sie einen Ort ein!");
+    };
 
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log(data);
-            const { temp, feels_like } = data.main;
-            const beschreibung = data.weather[0].description;
-            const stadtName = data.name;
-            const land = data.sys.country;
-
-            const wetterAnzeigen1 = `Das aktuelle Wetter in: ${stadtName}, ${land}: ${beschreibung}, ${temp}°C (gefühlt ${feels_like}°C)`;
-
-            document.getElementById("wetter1").textContent = wetterAnzeigen1;
+            aktuellesWetter(data);
         })
-        .catch(() => window.alert("Bitte einen Ort eingeben"));
+        .catch(fehler => console.error(fehler));
+};
+
+function aktuellesWetter(aw) {
+    var temperaturMitBeschreibung = aw.weather[0].description + ", " + aw.main.temp + " °C";
+    var gefuehlteTemperatur = "Fühlt sich an wie " + aw.main.feels_like + " °C";
+    var ortMitLand = aw.name + ", " + aw.sys.country;
+    var icon = aw.weather[0].icon;
+    var wetterIcon = `https://openweathermap.org/img/wn/${icon}@2x.png`;
+
+    document.getElementById("ergebnisAktuell").style.display = "flex";
+    document.getElementById("temperaturAktuell").textContent = temperaturMitBeschreibung;
+    document.getElementById("ortMitLandAktuell").textContent = ortMitLand;
+    document.getElementById("gefuehlteTemperatur").textContent = gefuehlteTemperatur;
+    document.getElementById("wetterIconAktuell").src = `${wetterIcon}`;
+    document.getElementById("wetterIconAktuell").style.display = "block";
+    document.getElementById("ergebnisPrognose").style.display = "none";
 };
 
 function wetterVorhersageAbrufen() {
-    const stadt = document.getElementById("stadtname").value;
-    const apiKey = "";
+    var stadt = document.getElementById("stadtname").value;
+    const apiKey = "0e4194c846936b540bce21b6b2a47fb9";
     const url = `https://api.openweathermap.org/data/2.5/forecast?q=${stadt}&appid=${apiKey}&units=metric&lang=de`;
+
+    if (document.getElementById("stadtname").value == '') {
+        window.alert("Bitte geben Sie einen Ort ein!");
+    };
 
     fetch(url)
         .then(response => response.json())
         .then(data => {
-            console.log('hallo');
-            const { temp, feels_like } = data.list[1].main;
-            console.log('hallo2');
-            const beschreibung = data.list[2].description;
-            console.log('hallo3');
-            const stadtName = data.city.name;
-            console.log('hallo4');
-            const land = data.city.country;
-            console.log('hallo5');
-            const wetterAnzeigen2 = `Das Wetter in: ${stadtName}, ${land}: ${beschreibung}, ${temp}°C (gefühlt ${feels_like}°C)`;
-            console.log('hallo6');
-            document.getElementById("wetter2").textContent = wetterAnzeigen2;
+            wetterVorhersage(data);
         })
-        .catch(() => window.alert("Bitte einen Ort eingeben"));
+        .catch(fehler => console.error(fehler));
 };
+
+function wetterVorhersage(wv) {
+    const vorhersagen = {};
+    var zaehler = 0;
+    var referenzUhrzeit = wv.list[0].dt;
+
+    wv.list.forEach(wert => {
+        if (referenzUhrzeit == wert.dt) {
+            vorhersagen[zaehler] = wert;
+            zaehler++;
+            referenzUhrzeit = referenzUhrzeit + 86400
+        }
+    });
+
+    for (var tage in vorhersagen) {
+        const array = vorhersagen[tage]
+        var ortMitLandVorhersage = wv.city.name + ", " + wv.city.country;
+        var temperaturPrognose = array.main.temp;
+        var datumUndUhrzeit = array.dt_txt;
+        var iconPrognose = array.weather[0].icon;
+        var wetterIconPrognose = `https://openweathermap.org/img/wn/${iconPrognose}@2x.png`;
+        document.getElementById("wetterIconPrognose" + tage).src = `${wetterIconPrognose}`;
+        document.getElementById("ortMitLandPrognose" + tage).textContent = ortMitLandVorhersage;
+        document.getElementById("temperaturPrognose" + tage).textContent = "Temperatur: " + temperaturPrognose + " °C";
+        document.getElementById("datumUndUhrzeitPrognose" + tage).textContent = "Datum: " + datumUndUhrzeit;
+        document.getElementById("ergebnisPrognose" + tage).style.display = "flex";
+    }
+    document.getElementById("ergebnisPrognose").style.display = "flex";
+    document.getElementById("ergebnisAktuell").style.display = "none";
+}

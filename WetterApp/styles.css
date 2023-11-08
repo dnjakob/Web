@@ -3,7 +3,6 @@ body {
     padding: 0;
     display: flex;
     min-height: 100vh;
-    font-family: Arial;
 }
 
 #wrapper {
@@ -12,41 +11,88 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: #FFA07A;
 }
 
 #app {
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: #FFDAB9;
+    background-color: #b9eaff;
     height: 300px;
-    width: 300px;
+    width: 600px;
+    padding: 15px;
     border-radius: 15px 15px 15px 15px;
-    box-shadow: 15px 15px black;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.3);
 }
 
 #ueberschrift {
     margin-top: auto;
 }
 
-header {
+#appHeader {
     display: flex;
     justify-content: center;
     height: 75px;
 }
 
-main {
+#appMain {
     display: flex;
     justify-content: center;
     height: 200px;
     flex-direction: column;
 }
 
-footer {
+#appFooter {
     display: flex;
     justify-content: center;
     align-items: end;
     height: 25px;
     margin-bottom: 20px;
+}
+
+#ergebnisse {
+    display: flex;
+}
+
+#ergebnisAktuell,
+#ergebnisPrognose0,
+#ergebnisPrognose1,
+#ergebnisPrognose2,
+#ergebnisPrognose3,
+#ergebnisPrognose4 {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: #b5e098;
+    border-radius: 15px 15px 15px 15px;
+    box-shadow: 15px 15px rgba(0, 0, 0, 0.3);
+    padding: 15px;
+}
+
+#ergebnisPrognose {
+    display: flex;
+    flex-direction: row;
+    gap: 50px;
+}
+
+#wetterIconAktuell {
+    height: 100px;
+    width: 100px;
+    display: none;
+}
+
+.gradient-custom {
+    background: linear-gradient(45deg,
+            rgba(255, 255, 255, 0.7),
+            rgba(84, 197, 207, 0.8) 100%);
+    display: flex;
+    flex-direction: column;
+}
+
+#maske {
+    display: flex;
+    flex-direction: column;
+    gap: 100px;
 }

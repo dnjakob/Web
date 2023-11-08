@@ -5,34 +5,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css"
+        integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
+    <script src="script.js"></script>
     <title>Projekt Wetter-App</title>
 </head>
 
 <body>
-    <div id="wrapper">
-        <div id="app">
-            <header>
-                <h1 id="ueberschrift">Wetter-App</h1>
-            </header>
-            <main>
-                <div id="formular">
-                    <label for="stadtname">Stadtname:</label>
-                    <input type="text" id="stadtname" name="stadtname" value="Rosenheim" onfocus="this.value=''"><br>
-                    <button type="button" onclick="aktuellesWetterAbrufen();">Aktuelle Wetter abrufen</button>
-                    <button type="button" onclick="wetterVorhersageAbrufen();">5-Tage Prognose</button>
+    <div id="wrapper" class="bg-image" style="
+      background-image: url(bliss.jpg);
+      background-position: center;
+      background-size: 100%;
+    ">
+        <div class="mask gradient-custom" style="height: 100%; width: 100%;">
+            <div id="maske" class="d-flex justify-content-center align-items-center h-100">
+            <div id="app">
+                <div id="appHeader">
+                    <h1 id="ueberschrift" class="h1">Wetter App</h1>
                 </div>
-                <div id="ergebnis">
-                    <p id="wetter1"></p>
-                    <p id="wetter2"></p>
+                <div id="appMain">
+                    <div id="formular" class="input-group">
+                        <label for="stadtname" class="input-group-text">Stadtname:</label>
+                        <input type="text" id="stadtname" class="form-control" name="stadtname" value="Rosenheim"
+                            onfocus="this.value=''"><br>
+                        <button type="button" class="btn btn-outline-info"
+                            onclick="aktuellesWetterAbrufen();">Aktuell</button>
+                        <button type="button" class="btn btn-outline-info"
+                            onclick="wetterVorhersageAbrufen();">5-Tage</button>
+                    </div>
                 </div>
-            </main>
-            <footer>
-                <div id="fussnote">
-                    <span>Urheberrecht © 2023 Daniel Jakob</span>
+                <div id="appFooter">
+                    <div id="fussnote">
+                        <span>Urheberrecht © 2023 Daniel Jakob</span>
+                    </div>
                 </div>
-            </footer>
+            </div>
+            <div id="ergebnisse">
+                <div id="ergebnisAktuell">
+                    <img id="wetterIconAktuell" src="">
+                    <p id="ortMitLandAktuell"></p>
+                    <p id="temperaturAktuell"></p>
+                    <p id="gefuehlteTemperatur"></p>
+                </div>
+                <div id="ergebnisPrognose">
+                    <div id="ergebnisPrognose0">
+                        <img id="wetterIconPrognose0" src="">
+                        <p id="ortMitLandPrognose0"></p>
+                        <p id="temperaturPrognose0"></p>
+                        <p id="datumUndUhrzeitPrognose0"></p>
+                    </div>
+                    <div id="ergebnisPrognose1">
+                        <img id="wetterIconPrognose1" src="">
+                        <p id="ortMitLandPrognose1"></p>
+                        <p id="temperaturPrognose1"></p>
+                        <p id="datumUndUhrzeitPrognose1"></p>
+                    </div>
+                    <div id="ergebnisPrognose2">
+                        <img id="wetterIconPrognose2" src="">
+                        <p id="ortMitLandPrognose2"></p>
+                        <p id="temperaturPrognose2"></p>
+                        <p id="datumUndUhrzeitPrognose2"></p>
+                    </div>
+                    <div id="ergebnisPrognose3">
+                        <img id="wetterIconPrognose3" src="">
+                        <p id="ortMitLandPrognose3"></p>
+                        <p id="temperaturPrognose3"></p>
+                        <p id="datumUndUhrzeitPrognose3"></p>
+                    </div>
+                    <div id="ergebnisPrognose4">
+                        <img id="wetterIconPrognose4" src="">
+                        <p id="ortMitLandPrognose4"></p>
+                        <p id="temperaturPrognose4"></p>
+                        <p id="datumUndUhrzeitPrognose4"></p>
+                    </div>
+                </div>
+            </div>
         </div>
+    </div>
     </div>
 </body>
 
