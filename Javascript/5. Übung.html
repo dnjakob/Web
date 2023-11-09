@@ -1,0 +1,28 @@
+<body>
+
+    <h1 id="halloWelt">Hallo Welt</h1>
+    <script>
+        document.getElementById("halloWelt").addEventListener("click", aendereText);
+
+        function aendereText() {
+            document.getElementById("halloWelt").innerHTML = "Hallo schöne Welt";
+        }
+    </script>
+
+    <button id="meinBtn">Klick mich</button>
+
+    <script>
+        var x = document.getElementById("meinBtn");
+        x.addEventListener("click", meineFnktn);
+        x.addEventListener("click", eineAndereFunktion);
+
+        function meineFnktn() {
+            alert("Servus!");
+        }
+
+        function eineAndereFunktion() {
+            alert("Diese Funktion wurde auch noch ausgeführt!");
+        }
+    </script>
+
+</body>
