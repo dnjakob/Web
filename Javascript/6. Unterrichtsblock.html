@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <style>
+        #anzeige {
+            background-color: red;
+            height: 100px;
+            width: 100px;
+        }
+
+        #anzeigetext {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="anzeige">
+        <p id="anzeigetext"></p>
+    </div>
+
+    <script>
+        const tage = ["Sonntag", "Montag", "Dienstag", "Mittwoch", "Donnerstag", "Freitag", "Samstag"];
+
+        var a = document.getElementById("anzeige");
+        a.addEventListener("mouseover", datumsausgabe);
+        a.addEventListener("mouseleave", divleer);
+
+        function divleer() {
+            document.getElementById("anzeigetext").innerHTML = "";
+        }
+
+        function datumsausgabe() {
+            switch (new Date().getDay()) {
+                default:
+                    document.getElementById("anzeigetext").innerHTML = tage[0];
+                    break;
+                case 3:
+                    document.getElementById("anzeigetext").innerHTML = tage[1];
+                    break;
+                case 4:
+                    document.getElementById("anzeigetext").innerHTML = tage[2];
+                    break;
+                case 0:
+                    document.getElementById("anzeigetext").innerHTML = tage[3];
+                    break;
+                case 6:
+                    document.getElementById("anzeigetext").innerHTML = tage[4];
+                    break;
+                case 5:
+                    document.getElementById("anzeigetext").innerHTML = tage[5];
+                    break;
+                case 1:
+                    document.getElementById("anzeigetext").innerHTML = tage[6];
+            };
+        };
+
+    </script>
+</body>
+
+</html>
