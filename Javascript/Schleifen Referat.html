@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schleifen Referat</title>
+</head>
+
+<body>
+    <h1>Schleifen Referat</h1>
+    <h2>siehe Konsolenausgabe</h2>
+
+
+    <script>
+
+        // for-Schleife
+        console.log("for-Schleife")
+
+        for (let i = 0; i < 5; i++) {
+            console.log(i);
+        }
+
+        // for...in-Schleife
+        console.log("for...in-Schleife")
+
+        const beispielObjekt = {
+            wert1: 1,
+            wert2: 2,
+            wert3: 3,
+            wert4: 4,
+            wert5: 5
+        };
+
+        for (let schluesselwert in beispielObjekt) {
+            console.log(schluesselwert + ': ' + beispielObjekt[schluesselwert]);
+        }
+
+        // for...of-Schleife
+        console.log("for...of-Schleife")
+
+        const beispielArray = [1, 2, 3, 4, 5];
+
+        for (let wert of beispielArray) {
+            console.log(wert);
+        }
+
+        // while-Schleife
+        console.log("while-Schleife")
+
+        let i = 0;
+
+        while (i < 5) {
+            console.log(i);
+            i++;
+        }
+
+        // do...while-Schleife
+        console.log("do...while-Schleife")
+
+        let j = 0;
+
+        do {
+            console.log(j);
+            j++;
+        } while (j < 0);
+
+        // break-Anweisung
+        console.log("break-Anweisung")
+
+        for (let i = 0; i < 5; i++) {
+            if (i === 3) {
+                break;
+            }
+            console.log(i);
+        }
+
+        // continue-Anweisung
+        console.log("continue-Anweisung")
+
+        let k = 0;
+
+        while (k < 5) {
+            k++;
+            if (k === 3) {
+                continue;
+            }
+            console.log(k);
+        }
+
+    </script>
+</body>
+
+</html>
