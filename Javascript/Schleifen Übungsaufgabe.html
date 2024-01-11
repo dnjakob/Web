@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schleifen Übungsaufgabe</title>
+    <style>
+        body {
+            font-family: "Comic Sans MS";
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <th>Eigenschaften der Person</th>
+                <th>Werte der Eigenschaften</th>
+            </tr>
+        </thead>
+        <tbody id="inhalt"></tbody>
+    </table>
+    <script>
+        const person = {
+            Name: "Daniel",
+            nachname: "Jakob",
+            alter: 24,
+            groesse_in_m: 1.80,
+            beruf: "Azubi"
+        }
+
+        const inhalt = document.getElementById("inhalt");
+
+        for (let schluesselwert in person) {
+
+            if (schluesselwert == "nachname") continue;
+
+            const reihe = document.createElement("tr");
+
+            const spalte1 = document.createElement("td");
+            spalte1.textContent = schluesselwert;
+            reihe.appendChild(spalte1);
+
+            const spalte2 = document.createElement("td");
+            spalte2.textContent = person[schluesselwert];
+            reihe.appendChild(spalte2);
+
+            inhalt.appendChild(reihe);
+            
+        }
+    </script>
+</body>
+
+</html>
