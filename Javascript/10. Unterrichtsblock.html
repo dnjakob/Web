@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        const tiere = ["Luchs", "Hirsch", "Uhu", "Wildsau", "Feldhase", "Fuchs"];
+
+        function tieren() {
+
+            let text = "";
+            for (let liste = 0; liste < tiere.length; liste++) {
+                text += "<li>" + tiere[liste] + "</li>";
+            }
+
+            document.getElementById("demo").innerHTML = text;
+        };
+
+        function speichern() {
+            let test = document.getElementById("eingabe").value.length
+            let eingabetext = document.getElementById("eingabe").value;
+            if (test != 0) {
+                tiere.push(eingabetext)
+            };
+        };
+
+    </script>
+    <h1 id="ueberschrift">Welche Tiere leben im Wald</h1>
+    <label for="eingabe">Geben Sie ein Tier ein:</label>
+    <input type="text" id="eingabe" name="eingabe"><br>
+    <button type="button" onclick="speichern()">Absenden!</button><br><br>
+    <button type="button" onclick="tieren()">Liste ausgeben!</button>
+    <ul id="demo"></ul>
+</body>
+
+</html>
