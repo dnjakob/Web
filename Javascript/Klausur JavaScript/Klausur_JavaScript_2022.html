@@ -136,7 +136,7 @@
 			spalte4: 'Schonzeit',
 			spalte5: 'Lebensraum'
 		};
-
+		
 		function tabelleErstellen() {
 
 			const tabelle = document.createElement('table');
@@ -166,6 +166,64 @@
 		};
 
 		document.getElementById('forelle').addEventListener('mouseout', tabelleErstellen);
+
+		// ChatGPT-Variante, die Aufgabe zu lösen
+
+		/* 
+
+		// Flag, um sicherzustellen, dass das br-Element nur einmal eingefügt wird
+		let brInserted = false;
+
+		// Funktion zum Erstellen der Tabelle
+		function generateTable() {
+
+			const ausgabeTabelle = document.getElementById('ausgabeTabelle');
+
+			// Lösche die vorherige Tabelle, falls vorhanden
+			while (ausgabeTabelle.firstChild) {
+				ausgabeTabelle.removeChild(ausgabeTabelle.firstChild);
+			}
+
+			// Füge das br-Element vor ausgabeTabelle ein, wenn es noch nicht eingefügt wurde
+			if (!brInserted) {
+				ausgabeTabelle.insertAdjacentHTML('beforebegin', '<br>');
+				brInserted = true;
+			}
+
+			const table = document.createElement('table');
+
+			const tableHeaderRow = document.createElement('tr');
+
+			// Iteriere über die Tabellenkopf-Eigenschaften
+			for (const key in tabellenKopf) {
+				const th = document.createElement('th');
+				th.textContent = tabellenKopf[key];
+				tableHeaderRow.appendChild(th);
+			}
+
+			// Füge den Tabellenkopf zur Tabelle hinzu
+			document.getElementById('ausgabeTabelle').appendChild(tableHeaderRow);
+
+			// Iteriere über die Objekte im Array und erstelle eine Reihe für jedes Objekt
+			fische.forEach(fisch => {
+				const tableRow = document.createElement('tr');
+
+				// Iteriere über die Eigenschaften jedes Objekts und füge Zellen zur Reihe hinzu
+				for (const key in fisch) {
+					const td = document.createElement('td');
+					td.textContent = fisch[key];
+					tableRow.appendChild(td);
+				}
+
+				// Füge die Reihe zur Tabelle hinzu
+				document.getElementById('ausgabeTabelle').appendChild(tableRow);
+			});
+		}
+
+		// Eventlistener für das Mouseout-Event auf dem Bild "forelle"
+		document.getElementById('forelle').addEventListener('mouseout', generateTable);
+
+		*/
 
 		/* 
 		6. Bei Klick auf das Bild vom Spiegelkarpfen, soll dem Array "fische"
