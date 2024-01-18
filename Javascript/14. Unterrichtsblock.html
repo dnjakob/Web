@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14. Unterrichtsblock</title>
+</head>
+
+<body>
+    <script>
+        const buchstaben = new Set();
+
+        const a = "a";
+        const b = "b";
+        const c = "c";
+
+        buchstaben.add(a);
+        buchstaben.add(b);
+        buchstaben.add(c);
+
+        let text = "";
+        for (const x of buchstaben.values()) {
+            text += x;
+            console.log(text);
+        };
+
+        // set-Aufgaben
+        // Aufgabe 1
+        console.log("=== set-Aufgaben ===");
+
+        const zahlen1 = new Set([1, 2, 3, 4, 5]);
+        let zahl1 = "";
+        for (const nr1 of zahlen1.values()) {
+            if (nr1 == 5) {
+                zahl1 += nr1;  
+            }
+            else {
+                zahl1 += nr1 + ", "; 
+            }
+            console.log(zahl1);
+        };
+
+        // Aufgabe 2
+
+        const fruits = new Set(["apple", "banana", "cherry"]);
+        console.log("Does fruits contain banana? " + fruits.has("banana"));
+        console.log("Does fruits contain date? " + fruits.has("date"));
+
+        // Aufgabe 3
+
+        const zahlen2 = new Set([1, 2, 3, 4, 5]);
+        let zahl2 = "";
+        for (const nr2 of zahlen2.values()) {
+            if (nr2 == 3) {
+                zahlen2.delete(3);  
+            }
+            else if (nr2 == 5) {
+                zahl2 += nr2;  
+            }
+            else {
+                zahl2 += nr2 + ", "; 
+            }
+            console.log(zahl2);
+        };
+
+        // Aufgabe 4
+
+        const colors = new Set(["red", "green", "blue"]);
+        colors.forEach((color) => {
+            console.log("The color is " + color);
+        });
+
+        // Aufgabe 5
+
+        const setA = new Set([1, 2, 3]);
+        const setB = new Set([3, 4, 5]);
+        const setC = new Set([...setA, ...setB]);
+        let zahl3 = "";
+        
+        for (const nr3 of setC.values()) {
+            if (nr3 == 5) {
+                zahl3 += nr3;  
+            }
+            else {
+                zahl3 += nr3 + ", "; 
+            }
+            console.log(zahl3);
+        };
+
+        // map-Aufgaben
+        // Aufgabe 1
+        console.log("=== map-Aufgaben ===");
+
+        const hauptstadtMap = new Map([
+            ["Deutschland", "Berlin"],
+            ["Österreich", "Wien"],
+            ["Schweiz", "Bern"]
+        ]);
+
+        console.log("Die Hauptstadt der Schweiz lautet: " + hauptstadtMap.get("Schweiz"));
+
+        // Aufgabe 2
+        const obstPreise = new Map([
+            ["Apfel", 1.5],
+            ["Birne", 2.3],
+            ["Banane", 0.7]
+        ]);
+
+        console.log("Gibt es hier Wassermelonen? " + obstPreise.has("Wassermelone"));
+
+        // Aufgabe 3
+        const telefone = new Map([
+            ["Sammuel", "0815"],
+            ["David", "6969"]
+        ]);
+
+    </script>
+
+</body>
+
+</html>
