@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To-Do-Liste</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            display: flex;
+        }
+
+        #wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+
+
+        const aufgaben = [];
+
+        let zaehler = 0;
+
+        function speichern() {
+            let pruefung = document.getElementById('eingabe').value.length;
+            if (pruefung != 0) {
+                let eingabeInhalt = document.getElementById('eingabe').value;
+                aufgaben.push(eingabeInhalt);
+                anzeigen(eingabeInhalt);
+            };
+        };
+
+        function anzeigen(text) {
+
+            let ausgabe = "";
+            const containerInhalt = document.getElementById('listeMitAufgaben');
+
+            const neueAufgabe = document.createElement('p');
+            neueAufgabe.setAttribute("id", "text" + zaehler);
+            let idAbfrage = neueAufgabe.getAttribute("id");
+
+            const erledigtButton = document.createElement('button');
+            erledigtButton.setAttribute("id", "eButton" + zaehler);
+            erledigtButton.textContent = "Erledigt";
+            let eButtonId = erledigtButton.getAttribute("id");
+            erledigtButton.onclick = aufgabeErledigtMarkieren.bind(this, idAbfrage);
+
+            const loeschenButton = document.createElement('button');
+            loeschenButton.setAttribute("id", "lButton" + zaehler);
+            loeschenButton.textContent = "Löschen";
+            let lButtonId = loeschenButton.getAttribute("id");
+            loeschenButton.onclick = aufgabeLoeschen.bind(this, idAbfrage, eButtonId, lButtonId);
+
+            ausgabe = text;
+            neueAufgabe.textContent = ausgabe;
+            containerInhalt.appendChild(neueAufgabe);
+            containerInhalt.appendChild(erledigtButton);
+            containerInhalt.appendChild(loeschenButton);
+            zaehler++;
+
+        };
+
+        function aufgabeErledigtMarkieren(textId) {
+            document.getElementById(textId).style.textDecoration = "line-through";
+        };
+
+        function aufgabeLoeschen(textId, eBtnId, lBtnId) {
+            const index = aufgaben.indexOf(document.getElementById(textId).textContent);
+            if (index > -1) {
+                aufgaben.splice(index, 1);
+            };
+            document.getElementById(textId).remove();
+            document.getElementById(eBtnId).remove();
+            document.getElementById(lBtnId).remove();
+        };
+
+        function lokalerSpeicher() {
+            localStorage.setItem("aufgaben", JSON.stringify(aufgaben));
+        };
+
+        function speicherAufrufen() {
+            aufgaben = JSON.Parse(localStorage.getItem("aufgaben"));
+        };
+
+    </script>
+    <div id="wrapper">
+        <h1>To-Do-Liste</h1>
+        <div id="eingabeBereich">
+            <h2>Aufgaben eintragen</h2>
+            <form id="eingabeFormular">
+                <label for="eingabe">Neue Aufgabe:</label>
+                <input type="text" id="eingabe" name="eingabe">
+                <button type="button" onclick="speichern()">Aufgabe eintragen</button>
+            </form>
+        </div>
+        <div id="aufgabenBereich">
+            <h2>Aufgaben verwalten</h2>
+            <div id="listeMitAufgaben">
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
