@@ -1,0 +1,87 @@
+Web Abschlussprüfung - Uebung 1
+
+Multiple Choice
+
+Was ist ein gültiges HTML-Tag für eine Überschrift der höchsten Ebene?
+b) <h1>
+
+Welches Attribut wird verwendet, um einen Link in einem neuen Tab zu öffnen?
+c) target="_blank"
+
+Welches HTML-Tag wird verwendet, um einen Absatz zu erstellen?
+b) <p>
+
+Wie definiert man eine HTML-Dokumenttyp-Deklaration korrekt?
+a) <!DOCTYPE html>
+
+Welches Attribut wird verwendet, um eine Bildquelle anzugeben?
+a) src
+
+Wie definiert man eine Klasse in CSS?
+a) .classname {}
+
+Welches CSS-Attribut ändert die Textfarbe?
+c) color
+
+Wie erstellt man einen abgerundeten Rand für ein Element in CSS?
+a) border-radius
+
+Welcher Wert für das display-Attribut entfernt ein Element vollständig aus dem Dokumentenfluss?
+a) none
+
+Welches Attribut in CSS wird verwendet, um den Abstand außerhalb eines Elements zu definieren?
+c) margin
+
+Wie erstellt man eine Variable in JavaScript?
+a) var name;
+
+Welche Methode wird verwendet, um eine Zeichenkette in der Konsole auszugeben?
+a) console.log()
+
+Wie definierst du eine anonyme Funktion?
+a) function() { ... }
+
+Welche Schleife wird verwendet, um einen Block von Anweisungen auszuführen, solange eine bestimmte Bedingung wahr ist?
+d) while
+
+Wie greifst du auf ein Element mit der ID „example“ zu?
+a) document.getElementById("example")
+
+Wie beginnt ein PHP-Skript?
+a) <?php
+
+Welche Methode wird verwendet, um Daten aus einem Formular zu erhalten, das mit der Methode „POST“ gesendet wurde?
+d) $_POST['name']
+
+Wie definiert man eine Funktion in PHP?
+c) function myFunction() {}
+
+Mit welcher PHP-Funktion kann eine Datei in eine Zeichenkette gelesen werden?
+c) file_get_contents()
+
+Wie kannst du einen String in PHP ausgeben?
+b) echo
+
+Fehlersuche
+
+Beispiel: HTML-Datei, Zeile 6, Schließender Title-Tag hat einen Schreibfehler
+stil.css, Zeile 4, font-family falsch geschrieben
+stil.css, Zeile 8, h2 ist der falsche tag es sollte h1 sein
+stil.css, Zeile 8, Komma zwischen #einleitung und h1 fehlt
+script.js, Zeile 3, id-Namen falsch geschrieben es sollte klickMich heißen
+script.js, Zeile 15, appendChild falsch geschrieben
+
+Code-Erweiterung JavaScript
+
+
+
+
+
+
+
+
+
+
+
+
+
